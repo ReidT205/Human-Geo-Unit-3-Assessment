@@ -577,3 +577,71 @@ blockquote {
         grid-template-columns: 1fr;
     }
 }
+
+/* Location Image Styles */
+.location-image-container {
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    background-color: #f8f9fa;
+}
+
+.location-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    border-radius: 8px 8px 0 0;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.location-image:hover {
+    transform: scale(1.02);
+}
+
+.location-image-container .caption {
+    padding: 0.8rem;
+    background-color: #f8f9fa;
+    margin-top: 0;
+    text-align: center;
+    font-style: italic;
+    color: #4a5568;
+    font-size: 0.9rem;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Make location cards more attractive */
+.location-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    background-color: var(--light-color);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+}
+
+@media (min-width: 768px) {
+    .location-card {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    
+    .location-card h3 {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 767px) {
+    .location-image-container {
+        margin-top: 1rem;
+    }
+}
